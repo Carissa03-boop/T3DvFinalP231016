@@ -1,0 +1,115 @@
+
+/* ------------------------------------------------------------------------------- */
+/* Navigationbar */
+.navbar{
+    background-color: #004B55;
+}
+.nav-link{
+    font-family: 'Lato', sans-serif;
+    color: #a4c9ba;
+
+}
+
+.nav-link:hover {
+    color: #F0EDE4;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #a4c9ba;
+    color: #F0EDE4;
+}
+
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+/* Logo */
+.navbar-brand img {
+    margin-left: -140px; 
+}
+
+/* UI elements */
+
+.r-brand img {
+    margin-left: 0px; 
+}
+
+.ar-brand img {
+    margin-left: -280px; 
+}
+
+.r-brand:hover img{
+    content: url(/ASSESTS/shopping-cart\ \(1\).svg);
+    transition: opacity 0.3s ease;
+    
+}
+
+.ar-brand:hover img{
+    content: url(/ASSESTS/user-circle-2\ \(1\).svg);
+    transition: opacity 0.3s ease;
+    
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: #004B55;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  
+  .section {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    color: #a4c9ba;
+  }
+  
+  .section h3 {
+    margin-top: 0;
+  }
+  
+  .section p {
+    margin-bottom: 0;
+    color: #a4c9ba;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  #copyright{
+    margin-left: -90px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+.section img{
+    margin-left: 100px;
+    margin-left: 5px;
+}
+
+.social{
+    margin-right: 100px;
+}
+
+.Logi{
+    margin-left: 150px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 110px;
+    background-color:#a4c9ba; 
+}
+
+/* UI Footer */
+
+
+
+
