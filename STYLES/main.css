@@ -3,6 +3,7 @@
 /* Navigationbar */
 .navbar{
     background-color: #004B55;
+    height: 80px;
 }
 .nav-link{
     font-family: 'Lato', sans-serif;
@@ -113,3 +114,8 @@ footer {
 
 
 
+.container-fluid{
+    background-color: #004B55;
+    color: #a4c9ba;
+    padding-top: 10px;
+}

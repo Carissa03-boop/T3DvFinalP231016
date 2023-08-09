@@ -15,7 +15,73 @@
 
     <!-- Nav Bar -->
 
-    <p>Hello World!</p>
+    <nav class="navbar fixed-top">
+      <div class="container">
+  <div class="container text-center">
+      <div class="row align-items-start">
+        <div class="col">
+            <div style="float: left;padding-top: 16px;">
+              <a href="#">
+                  <img src="/ASSESTS/shopping-cart 2.svg" height="30">
+                </a>
+                <a href="#">
+                  <img src="/ASSESTS/user-circle-2.svg" height="30">
+                </a>
+            </div>
+        </div>
+        <div class="col">
+          <a href="#">
+              <img src="/ASSESTS/logocruise.png" alt="Logo" height="110">
+            </a>
+        </div>
+        <div class="col">
+          <ul class="nav" style="float: right;padding-top: 7px;">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/trips.html">Trips</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/wishlist.html">Checkout</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<div class="container mt-5 pt-5">
+
+  <!-- Header -->
+
+
+  <!-- Plants List Cards -->
+  <div class="row py-5 gy-3" id="tripsContainer">
+
+      <!-- Browse Card Template -->
+      <template id="tripCardTemplate">
+          <div class="col-4">
+
+              <!-- Card -->
+              <div class="card">
+                  <img src="/ASSESTS/trip.1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" id="nameText">Ficus Tree</h5>
+                    <p class="card-text" id="pricetext">R320</p>
+                    <p class="card-text" id="descriptionText">Graceful and lush, this indoor plant boasts glossy, emrald-green leaves that effortlessly brighten any space. Easy to care for and standing at an ideal height, our Ficus Tree is the perfect addition to elevate your interior decor.</p>
+                  </div>
+              </div>
+
+          </div>
+      </template>
+  </div>
+
+
+</div>
 
 
     <!--Scripts-->
@@ -25,4 +91,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="/SCRIPTS/trips.js"></script>    
   </body>
+
+  <div class="container-fluid text-center">
+    <div class="row align-items-start">
+      <div class="col">
+        <img src="/ASSESTS/UntiIIItled-1.png" style="width: 110px; height: 110px;">
+      </div>
+      <div class="col">
+         <p>Terms and Conditions</p>
+         <p>Privacy policy</p>
+         <p>Copyright2023 all rights reserved.</p>
+      </div>
+      <div class="col">
+        <p>Social:</p>
+        <a href="https://www.instagram.com/" target="_blank">
+            <img class="insta"   src="/ASSESTS/instagram2.svg"   alt="Instagram Icon" width="30" height="30">
+          </a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="/ASSESTS/facebook2.svg" alt="Instagram Icon" width="30" height="30">
+          </a>
+          <a href="https://www.youtube.com/" target="_blank">
+            <img src="/ASSESTS/youtube2.svg" alt="Instagram Icon" width="30" height="30">
+          </a>
+          <a href="https://twitter.com/?lang=en-za" target="_blank">
+            <img src="/ASSESTS/twitter1.svg" alt="Instagram Icon" width="30" height="30">
+          </a>
+      </div>
+    </div>
+  </div>
 </html>
