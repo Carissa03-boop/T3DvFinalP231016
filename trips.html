@@ -54,32 +54,36 @@
 </nav>
 
 
-<div class="container mt-5 pt-5">
-
+<div class="container pt-5" style="margin-top: 80px;">
   <!-- Header -->
+  <h2>Browse Trips</h2>
+
+  <!-- Trips List Cards -->
+  <div class="row pt-5 gy-3" id="tripsContainer">
 
 
-  <!-- Plants List Cards -->
-  <div class="row py-5 gy-3" id="tripsContainer">
+    <!-- Trip Card Template -->
+    <template id="tripCardTemplate">
+      <div class="col-4" >
 
-      <!-- Browse Card Template -->
-      <template id="tripCardTemplate">
-          <div class="col-4">
-
-              <!-- Card -->
-              <div class="card">
-                  <img src="/ASSESTS/trip.1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title" id="nameText">Ficus Tree</h5>
-                    <p class="card-text" id="pricetext">R320</p>
-                    <p class="card-text" id="descriptionText">Graceful and lush, this indoor plant boasts glossy, emrald-green leaves that effortlessly brighten any space. Easy to care for and standing at an ideal height, our Ficus Tree is the perfect addition to elevate your interior decor.</p>
-                  </div>
-              </div>
-
+        <!-- Card -->
+        <div class="card">
+          <img src="ASSESTS/trip.1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" id="nameText">Serenity Sunset Cruise</h5>
+            <p class="card-text" id="whereText">Santorini, Greece</p>
+            <p class="card-text" id="priceText"><b>R 2250 pp</b></p>
+            <p class="card-text" id="dateText"><b>Date:</b> October 15, 2023</p>
+            <p class="card-text"  id="departureText"><b>Departure:</b> Santorini, Greece</p>
+            <p class="card-text"  id="codeText"><b>Code:</b> 0054</p>
+            <a href="#" class="btn btn-primary" id="buttonText">Purchace Ticket</a>
           </div>
-      </template>
-  </div>
-
+        </div>
+  
+  
+      </div>
+    </template>
+</div>
 
 </div>
 
