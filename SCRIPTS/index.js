@@ -1,10 +1,17 @@
-$.ajax({
-    type:"GET",
-    url:"https://api.openweathermap.org/data/2.5/weather?q=" + plant.origin + "&appid=0c8a911e5c7f8e5a03991afe2075de21",
-    success: function(data){
-      temperature = data 
-      console.log(temperature);
-    }
-  }).done(function(){
-    $(currentChild).find("#currentTemp").text("OriginTemp: " + Math.round(temperature.main.temp- 273) + "°C");
-  })
+const weatherDescription = document.querySelector('.weather-description');
+
+// Replace 'YOUR_API_KEY' with your actual API key
+const apiKey = 'c4ad73b8aee76935aa88a7470e30940a';
+const city = 'New York'; // Change this to the desired city
+
+// Fetch weather data using the OpenWeatherMap API
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+        const weather = data.weather[0].description;
+        weatherDescription.textContent = `Current weather: ${weather}`;
+    })
+    .catch(error => {
+        console.error('Error fetching weather data:', error);
+        weatherDescription.textContent = 'Error fetching weather data';
+    });

@@ -121,6 +121,25 @@ footer {
 }
 
 /* Weather widget */
-.col-12{
-    background-color: #1e1d19;
+.weather-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.weather-image img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.weather-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.weather-description {
+    font-size: 16px;
+    color: #555;
 }
