@@ -7,97 +7,126 @@ const arrTrips = [
     {
         name:"Serenity Sunset Cruise",
         where:"Santorini, Greece",
-        price:"R 2250 pp",
+        price:" 2250 ",
         date:"Date: October 15, 2023",
         departure:"Departure: Santorini, Greece ",
         code:"Code: 0054",
-        image:"trip1.jpg"
+        image:"trip1.jpg",
+        tripLength:"short",
+        addedDate:"2023-03-05"
 
     },
     {
         name:"Aqua Adventure Excursion",
         where:"Great Barrier Reef, Australia",
-        price:"R 3300 pp",
+        price:"3300 ",
         date:"Date: November 5, 2023",
         departure:"Departure: Cairns, Australia",
         code:"Code: 0854",
-        image:"trip2.jpg"
+        image:"trip2.jpg",
+        tripLength:"long",
+        addedDate:"2023-05-01"
+
 
     },
     {
         name:"Paradise Island Voyage",
         where:"Maldives",
-        price:"R 4500 pp",
+        price:" 4500 ",
         date:"Date: December 12, 2023",
         departure:"Departure: Malé, Maldives ",
         code:"Code: 0954",
-        image:"trip3.jpg"
+        image:"trip3.jpg",
+        tripLength:"short",
+        addedDate:"2023-07-04"
+
 
     },
     {
         name:"Nautical Dreams Discovery",
         where:"Norwegian Fjords, Norway",
-        price:"R 2700 pp",
+        price:"2700 ",
         date:"Date: June 20, 2023",
         departure:"Departure: Bergen, Norway",
         code:"Code: 3054",
-        image:"trip4.jpg"
+        image:"trip4.jpg",
+        tripLength:"short",
+        addedDate:"2023-08-08"
+
 
     },
     {
         name:"Emerald Waters Escape",
         where:" Caribbean Sea",
-        price:"R 3750 pp",
+        price:" 3750 ",
         date:"Date: July 8, 2023",
         departure:"Departure: Miami, USA",
         code:"Code: 7054",
-        image:"trip5.jpg"
+        image:"trip5.jpg",
+        tripLength:"short",
+        addedDate:"2023-03-15"
+
 
     },
     {
         name:"Starlight Serenade Cruise",
         where:" Ha Long Bay, Vietnam",
-        price:"R  2850 pp",
+        price:"  2850 ",
         date:"Date: May 14, 2023",
         departure:"Departure: San Francisco, USA",
         code:"Code: 0076",
-        image:"trip6.jpg"
+        image:"trip6.jpg",
+        tripLength:"short",
+        addedDate:"2023-04-29"
+
 
     },
     {
         name:"Tropical Breeze Odyssey",
         where:"Bora Bora, French Polynesia",
-        price:"R 5250 pp",
+        price:" 5250 ",
         date:"Date: January 25, 2024",
         departure:"Departure: Papeete, Polynesia",
         code:"Code: 0984",
-        image:"trip7.jpg"
+        image:"trip7.jpg",
+        tripLength:"long",
+        addedDate:"2023-01-05"
+
 
     },
     {
         name:"Harbor Horizon Expedition",
         where:"San Francisco Bay, USA",
-        price:"R 2550 pp",
+        price:" 2550 ",
         date:"Date: September 2, 2023",
         departure:"Departure: Hạ City, Vietnam",
         code:"Code: 0454",
-        image:"trip8.jpg"
+        image:"trip8.jpg",
+        tripLength:"long",
+        addedDate:"2023-12-07"
+
 
     },
     {
         name:"Moonlit Marina Soiree",
         where:"French Riviera, France",
-        price:"R 4200 pp",
+        price:" 4200 ",
         date:"Date: August 18, 2023",
         departure:"Departure: Nice, France",
         code:"Code: 2345",
-        image:"trip9.jpg"
+        image:"trip9.jpg",
+        tripLength:"short",
+        addedDate:"2023-11-14"
+
 
     }
 
 
 
 ];
+
+let appliedFilter = "";
+let appliedSort = "date added";
 
 
 // ---------------------------------------------------------------------------
@@ -110,7 +139,7 @@ $(document).ready(function(){
 
  // Trips Page
 
-$(loadTrips);
+  filterSortTrips();
 
 });
 
@@ -118,18 +147,22 @@ $(loadTrips);
 // Load all Trips
 // ---------------------------------------------------------------------------
 
-function loadTrips() {
+function loadTrips(tripsToShow) {
+
+    // Clear all elements inside the plants cards container
+
+    $("#tripsContainer").empty();
 
     // Loop through the list of trips
-    for (let i = 0; i < arrTrips.length; i++) {
-        const trip = arrTrips[i];
+    for (let i = 0; i < tripsToShow.length; i++) {
+        const trip = tripsToShow[i];
 
-        console.log(trip);
+        console.log(trip.name)
 
         // Select trip container and add current arr trip to it
         $("#tripsContainer").append($("#tripCardTemplate").html());
         // Create a varieble that contains the most recent added plant card
-        let currentChild = $("#tripsContainer").children().eq(i+1);
+        let currentChild = $("#tripsContainer").children().eq(i);
         // Set the content for the current Trip card from the trips list array
         $(currentChild).find(".card-img-top").attr('src', 'ASSESTS/' + trip.image);
         $(currentChild).find("#nameText").text(trip.name);
@@ -148,6 +181,65 @@ function loadTrips() {
 
         
     }
+
+}
+
+// ---------------------------------------------------------------------------
+// When a filter or sort option is clicked
+// ---------------------------------------------------------------------------
+
+$("input[name='filterRadio']").click(function(){
+
+    appliedFilter = $(this).attr('value');
+
+    filterSortTrips();
+
+});
+
+$("input[name='sortRadio']").click(function(){
+     appliedSort = $(this).attr('value');
+
+    filterSortTrips();
+});
+
+function filterSortTrips() {
+    let filteredSortedArrTrips = []
+
+    console.log(appliedFilter);
+    console.log(appliedSort);
+
+    // Filter Trips
+    if (appliedFilter) {
+        filteredSortedArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
+    } else {
+        filteredSortedArrTrips = arrTrips; 
+    }
+
+    // Sort Trips
+
+    if (appliedSort == "low to high") {
+        // Sort the plants from the lowest to highest price
+        filteredSortedArrTrips = filteredSortedArrTrips.sort((a,b) => {
+            return a.price - b.price;
+
+        });
+
+    } else if (appliedSort == "date added") {
+
+        // Sort plants from the newest to oldest
+        filteredSortedArrTrips = filteredSortedArrTrips.sort((a,b) =>{
+            let da = new Date(a.addedDate);
+            let db = new Date(b.addedDate);
+
+            return db-da;
+        });
+         
+    }
+
+
+    console.log(filteredSortedArrTrips)
+  
+    loadTrips(filteredSortedArrTrips);
 
 }
 

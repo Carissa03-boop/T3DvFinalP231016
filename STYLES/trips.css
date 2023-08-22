@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
 /* ------------------------------------------------------------------------------- */
 /* Navigationbar */
 .navbar{
@@ -140,15 +142,12 @@ footer {
     transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-/* .card.long {
-    height: 500px;
-} */
 
 .card-img-top.small{
     height: 190px;
 }
 
-.btn{
+.oncard{
     float: right;
     margin-right: 10px;
     margin-top: -60px;
@@ -159,3 +158,71 @@ footer {
     padding-left: 20px;
     padding-top: 5px;
 }
+
+
+
+/* filter and sorting buttons */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sort {
+    margin-left: auto;
+  }
+  
+  /* Adjust the label styles to maintain proper alignment */
+  .sort label {
+    margin-left: 10px;
+  }
+  
+  /* Clear the float to prevent other elements from overlapping */
+  .container {
+    clear: both;
+  }
+
+  .btn-outline-success{
+    border: 1px solid #004B55 ;
+    color: #004B55;
+    border-radius: 20px;
+  }
+
+/* The checked color state for the radio buttons */
+.btn-group .btn-check:checked + .btn-outline-success {
+    background-color: #004B55;
+    color: #F0EDE4; 
+    border-color: #004B55; 
+}
+
+/* The hover state for the radio buttons */
+.btn-group .btn-outline-success:hover {
+    color: #1EC5D2;
+    border-color: #1EC5D2; 
+}
+
+.btn-outline-secondary{
+    border: 1px solid #1EC5D2 ;
+    color: #1EC5D2;
+    border-radius: 20px;
+  }
+
+
+.btn-group .btn-check:checked + .btn-outline-secondary { 
+    border-color: #1EC5D2;
+    background-color: #1EC5D2; 
+}
+
+/* Change the hover state for the radio buttons */
+.btn-group .btn-outline-secondary:hover {
+    border-color: #004B55; 
+    color: #004B55;
+}
+
+
+
+
+
+
+
+  
