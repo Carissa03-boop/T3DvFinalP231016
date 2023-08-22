@@ -119,3 +119,8 @@ footer {
     color: #a4c9ba;
     padding-top: 10px;
 }
+
+/* Weather widget */
+.col-12{
+    background-color: #1e1d19;
+}
