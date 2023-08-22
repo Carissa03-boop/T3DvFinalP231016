@@ -8,9 +8,9 @@ const arrTrips = [
         name:"Serenity Sunset Cruise",
         where:"Santorini, Greece",
         price:"R 2250 pp",
-        date:"October 15, 2023",
-        departure:"Santorini, Greece ",
-        code:"0054",
+        date:"Date: October 15, 2023",
+        departure:"Departure: Santorini, Greece ",
+        code:"Code: 0054",
         image:"trip1.jpg"
 
     },
@@ -18,9 +18,9 @@ const arrTrips = [
         name:"Aqua Adventure Excursion",
         where:"Great Barrier Reef, Australia",
         price:"R 3300 pp",
-        date:"November 5, 2023",
-        departure:"Cairns, Australia",
-        code:"0854",
+        date:"Date: November 5, 2023",
+        departure:"Departure: Cairns, Australia",
+        code:"Code: 0854",
         image:"trip2.jpg"
 
     },
@@ -28,9 +28,9 @@ const arrTrips = [
         name:"Paradise Island Voyage",
         where:"Maldives",
         price:"R 4500 pp",
-        date:"December 12, 2023",
-        departure:"Malé, Maldives ",
-        code:"0954",
+        date:"Date: December 12, 2023",
+        departure:"Departure: Malé, Maldives ",
+        code:"Code: 0954",
         image:"trip3.jpg"
 
     },
@@ -38,9 +38,9 @@ const arrTrips = [
         name:"Nautical Dreams Discovery",
         where:"Norwegian Fjords, Norway",
         price:"R 2700 pp",
-        date:"June 20, 2023",
-        departure:"Bergen, Norway",
-        code:"3054",
+        date:"Date: June 20, 2023",
+        departure:"Departure: Bergen, Norway",
+        code:"Code: 3054",
         image:"trip4.jpg"
 
     },
@@ -48,9 +48,9 @@ const arrTrips = [
         name:"Emerald Waters Escape",
         where:" Caribbean Sea",
         price:"R 3750 pp",
-        date:"July 8, 2023",
-        departure:"Miami, USA",
-        code:"7054",
+        date:"Date: July 8, 2023",
+        departure:"Departure: Miami, USA",
+        code:"Code: 7054",
         image:"trip5.jpg"
 
     },
@@ -58,9 +58,9 @@ const arrTrips = [
         name:"Starlight Serenade Cruise",
         where:" Ha Long Bay, Vietnam",
         price:"R  2850 pp",
-        date:"May 14, 2023",
-        departure:"San Francisco, USA",
-        code:"0076",
+        date:"Date: May 14, 2023",
+        departure:"Departure: San Francisco, USA",
+        code:"Code: 0076",
         image:"trip6.jpg"
 
     },
@@ -68,9 +68,9 @@ const arrTrips = [
         name:"Tropical Breeze Odyssey",
         where:"Bora Bora, French Polynesia",
         price:"R 5250 pp",
-        date:"January 25, 2024",
-        departure:"Papeete, French Polynesia",
-        code:"0984",
+        date:"Date: January 25, 2024",
+        departure:"Departure: Papeete, Polynesia",
+        code:"Code: 0984",
         image:"trip7.jpg"
 
     },
@@ -78,9 +78,9 @@ const arrTrips = [
         name:"Harbor Horizon Expedition",
         where:"San Francisco Bay, USA",
         price:"R 2550 pp",
-        date:"September 2, 2023",
-        departure:" Hạ Long City, Vietnam",
-        code:"0454",
+        date:"Date: September 2, 2023",
+        departure:"Departure: Hạ City, Vietnam",
+        code:"Code: 0454",
         image:"trip8.jpg"
 
     },
@@ -88,9 +88,9 @@ const arrTrips = [
         name:"Moonlit Marina Soiree",
         where:"French Riviera, France",
         price:"R 4200 pp",
-        date:"August 18, 2023",
-        departure:"Nice, France",
-        code:"2345",
+        date:"Date: August 18, 2023",
+        departure:"Departure: Nice, France",
+        code:"Code: 2345",
         image:"trip9.jpg"
 
     }
