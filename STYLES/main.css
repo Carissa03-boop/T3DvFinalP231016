@@ -35,25 +35,9 @@
 
 /* UI elements */
 
-.r-brand img {
-    margin-left: 0px; 
-}
 
-.ar-brand img {
-    margin-left: -280px; 
-}
 
-.r-brand:hover img{
-    content: url(/ASSESTS/shopping-cart\ \(1\).svg);
-    transition: opacity 0.3s ease;
-    
-}
 
-.ar-brand:hover img{
-    content: url(/ASSESTS/user-circle-2\ \(1\).svg);
-    transition: opacity 0.3s ease;
-    
-}
 
 /* Footer */
 
