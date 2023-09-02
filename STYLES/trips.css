@@ -130,7 +130,7 @@ footer {
     background-color: #E1DBB8;
     color: #004B55;
     border: none;
-    height: 440px;
+    height: 450px;
 }
 
 .card:hover{
@@ -138,7 +138,7 @@ footer {
     background-color: #004B55;
     color: #fdfefe;
     border: 2px solid #1EC5D2;
-    height: 440px;
+    height: 450px;
     transition: opacity 0.3s ease;
 }
 
@@ -153,7 +153,7 @@ footer {
 
 
 .card-img-top.small{
-    height: 190px;
+    height: 160px;
 }
 
 .oncard{

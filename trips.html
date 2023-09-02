@@ -61,14 +61,27 @@
     <div class="row">
       <!-- Filter Radio buttons -->
       <div class="btn-group col-auto" role="group">
+      <!-- All trips filter button -->
         <input type="radio" class="btn-check" name="filterRadio" id="allTripsFilter" value="" autocomplete="off" checked>
         <label class="btn btn-outline-success" for="allTripsFilter">All Trips</label>
-      
+      <!-- Long trips filter button -->
         <input type="radio" class="btn-check" name="filterRadio" id="longTrips" value="long" autocomplete="off">
-        <label class="btn btn-outline-success" for="longTrips"><i class="bi bi-brightness-high"></i> Long strips</label>
-      
+        <label class="btn btn-outline-success" for="longTrips"><i class="bi bi-brightness-high"></i> Long Trips</label>
+      <!-- Short trips filter button -->
         <input type="radio" class="btn-check" name="filterRadio" id="shortTrips" value="short" autocomplete="off">
-        <label class="btn btn-outline-success" for="shortTrips"><i class="bi bi-brightness-low"></i> Short trips</label>
+        <label class="btn btn-outline-success" for="shortTrips"><i class="bi bi-brightness-low"></i> Short Trips</label>
+      <!-- Single destination filter button -->
+        <input type="radio" class="btn-check" name="filterRadio" id="singleDestination" value="single" autocomplete="off">
+        <label class="btn btn-outline-success" for="singleDestination"><i class="bi bi-brightness-low"></i> Single Destination</label>
+      <!-- Multi destination filter button -->
+        <input type="radio" class="btn-check" name="filterRadio" id="multiDestination" value="multi" autocomplete="off">
+        <label class="btn btn-outline-success" for="multiDestination"><i class="bi bi-brightness-low"></i> Multi Destination</label>
+      <!-- Round Trips filter button -->
+        <input type="radio" class="btn-check" name="filterRadio" id="roundTrips" value="round" autocomplete="off">
+        <label class="btn btn-outline-success" for="roundTrips"><i class="bi bi-brightness-low"></i> Round Trips</label>
+      <!-- Row Boat special filter button -->
+        <input type="radio" class="btn-check" name="filterRadio" id="rowBoatSpecial" value="special" autocomplete="off">
+        <label class="btn btn-outline-success" for="rowBoatSpecial"><i class="bi bi-brightness-low"></i> Row Boat Special</label>
       </div>
 
       <!-- Sort Radio buttons -->
@@ -103,6 +116,7 @@
             <p class="card-text" id="priceText"><b>R 2250</b></p>
             <p class="card-text" id="dateText"><b>Date:</b> October 15, 2023</p>
             <p class="card-text"  id="departureText"><b>Departure:</b> Santorini, Greece</p>
+            <p class="card-text"  id="arrivalText"><b>Arrival:</b> my huis</p>
             <p class="card-text"  id="codeText"><b>Code:</b> 0054</p>
             <a href="#" class="btn btn-primary oncard" id="buttonText">Purchace Ticket</a>
           </div>

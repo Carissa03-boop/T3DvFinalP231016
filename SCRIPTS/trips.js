@@ -5,27 +5,35 @@
 const arrTrips = [
 
     {
-        name:"Serenity Sunset Cruise",
+        name: "Serenity Sunset Cruise [35% OFF!]",
         where:"Santorini, Greece",
         price:" 2250 ",
-        date:"Date: October 15, 2023",
-        departure:"Departure: Santorini, Greece ",
-        code:"Code: 0054",
+        date:" March 5-8, 2023",
+        departure:" Santorini, Greece ",
+        arrival:"my huis",
+        code:"0054",
         image:"trip1.jpg",
         tripLength:"short",
-        addedDate:"2023-03-05"
+        addedDate:"2023-03-05",
+        destinationAmount:"multi",
+        returnOrigin:"round",
+        rrb:"special"
 
     },
     {
-        name:"Aqua Adventure Excursion",
+        name:"Aqua Adventure Excursion [20% OFF!]",
         where:"Great Barrier Reef, Australia",
-        price:"3300 ",
-        date:"Date: November 5, 2023",
-        departure:"Departure: Cairns, Australia",
-        code:"Code: 0854",
+        price:" 3300 ",
+        date:" May 1-11, 2023",
+        departure:" Cairns, Australia",
+        arrival:"my huis",
+        code:" 0854",
         image:"trip2.jpg",
         tripLength:"long",
-        addedDate:"2023-05-01"
+        addedDate:"2023-05-01",
+        destinationAmount:"multi",
+        returnOrigin:"round",
+        rrb:"special"
 
 
     },
@@ -33,25 +41,31 @@ const arrTrips = [
         name:"Paradise Island Voyage",
         where:"Maldives",
         price:" 4500 ",
-        date:"Date: December 12, 2023",
-        departure:"Departure: Malé, Maldives ",
-        code:"Code: 0954",
+        date:" July 4-9, 2023",
+        departure:" Malé, Maldives ",
+        arrival:"my huis",
+        code:" 0954",
         image:"trip3.jpg",
         tripLength:"short",
-        addedDate:"2023-07-04"
+        addedDate:"2023-07-04",
+        destinationAmount:"single",
 
 
     },
     {
-        name:"Nautical Dreams Discovery",
-        where:"Norwegian Fjords, Norway",
-        price:"2700 ",
-        date:"Date: June 20, 2023",
-        departure:"Departure: Bergen, Norway",
-        code:"Code: 3054",
+        name:"Nautical Dreams Discovery [30% OFF!]",
+        where:"Norwegian Fjords, Norway ",
+        price:" 2700",
+        date:" August 8-11, 2023",
+        departure:" Bergen, Norway",
+        arrival:"my huis",
+        code:" 3054",
         image:"trip4.jpg",
         tripLength:"short",
-        addedDate:"2023-08-08"
+        addedDate:"2023-08-08",
+        destinationAmount:"multi",
+        returnOrigin:"round",
+        rrb:"special"
 
 
     },
@@ -59,25 +73,30 @@ const arrTrips = [
         name:"Emerald Waters Escape",
         where:" Caribbean Sea",
         price:" 3750 ",
-        date:"Date: July 8, 2023",
-        departure:"Departure: Miami, USA",
-        code:"Code: 7054",
+        date:" March 15-18, 2023",
+        departure:" Miami, USA",
+        arrival:"my huis",
+        code:" 7054",
         image:"trip5.jpg",
         tripLength:"short",
-        addedDate:"2023-03-15"
+        addedDate:"2023-03-15",
+        destinationAmount:"single"
 
 
     },
     {
-        name:"Starlight Serenade Cruise",
+        name:"Starlight Serenade Cruise [30% OFF!]",
         where:" Ha Long Bay, Vietnam",
         price:"  2850 ",
-        date:"Date: May 14, 2023",
-        departure:"Departure: San Francisco, USA",
-        code:"Code: 0076",
+        date:" April 20-24, 2023",
+        departure:" San Francisco, USA",
+        arrival:"my huis",
+        code:" 0076",
         image:"trip6.jpg",
         tripLength:"short",
-        addedDate:"2023-04-29"
+        addedDate:"2023-04-20",
+        destinationAmount:"multi",
+        rrb:"special"
 
 
     },
@@ -85,38 +104,47 @@ const arrTrips = [
         name:"Tropical Breeze Odyssey",
         where:"Bora Bora, French Polynesia",
         price:" 5250 ",
-        date:"Date: January 25, 2024",
-        departure:"Departure: Papeete, Polynesia",
-        code:"Code: 0984",
+        date:" January 5-15, 2024",
+        departure:" Papeete, Polynesia",
+        arrival:"my huis",
+        code:" 0984",
         image:"trip7.jpg",
         tripLength:"long",
-        addedDate:"2023-01-05"
+        addedDate:"2023-01-05",
+        destinationAmount:"multi",
 
 
     },
     {
-        name:"Harbor Horizon Expedition",
+        name:"Harbor Horizon Expedition [15% OFF!]",
         where:"San Francisco Bay, USA",
         price:" 2550 ",
-        date:"Date: September 2, 2023",
-        departure:"Departure: Hạ City, Vietnam",
-        code:"Code: 0454",
+        date:" December 7-14, 2023",
+        departure:" Hạ City, Vietnam",
+        arrival:"my huis",
+        code:" 0454",
         image:"trip8.jpg",
         tripLength:"long",
-        addedDate:"2023-12-07"
+        addedDate:"2023-12-07",
+        destinationAmount:"multi",
+        returnOrigin:"round",
+        rrb:"special"
+
 
 
     },
     {
         name:"Moonlit Marina Soiree",
-        where:"French Riviera, France",
+        where:"French Riviera",
         price:" 4200 ",
-        date:"Date: August 18, 2023",
-        departure:"Departure: Nice, France",
-        code:"Code: 2345",
+        date:" November 14-16, 2023",
+        departure:" Nice, France",
+        arrival:"my huis",
+        code:" 2345",
         image:"trip9.jpg",
         tripLength:"short",
-        addedDate:"2023-11-14"
+        addedDate:"2023-11-14",
+        destinationAmount:"single"
 
 
     }
@@ -153,6 +181,8 @@ function loadTrips(tripsToShow) {
 
     $("#tripsContainer").empty();
 
+    
+
     // Loop through the list of trips
     for (let i = 0; i < tripsToShow.length; i++) {
         const trip = tripsToShow[i];
@@ -167,16 +197,22 @@ function loadTrips(tripsToShow) {
         $(currentChild).find(".card-img-top").attr('src', 'ASSESTS/' + trip.image);
         $(currentChild).find("#nameText").text(trip.name);
         $(currentChild).find("#whereText").text(trip.where);
-        $(currentChild).find("#priceText").text(trip.price);
-        $(currentChild).find("#dateText").text(trip.date);
-        $(currentChild).find("#departureText").text(trip.departure);
-        $(currentChild).find("#codeText").text(trip.code);
+        $(currentChild).find("#priceText").html(`<b>R</b>${trip.price}`);
+        $(currentChild).find("#dateText").html("<b>Date:</b> " + trip.date);
+        $(currentChild).find("#departureText").html("<b>Departure:</b> " + trip.departure);
+        $(currentChild).find("#codeText").html("<b>Code:</b> " + trip.code);
+        $(currentChild).find("#arrivalText").html("<b>Arrival:</b> " + trip.arrival);
+
 
         // Hide price where
         $(currentChild).find("#dateText").hide();
         $(currentChild).find("#departureText").hide();
+        $(currentChild).find("#arrivalText").hide();
         $(currentChild).find("#codeText").hide();
         $(currentChild).find("#buttonText").hide();
+
+        
+
 
 
         
@@ -210,32 +246,42 @@ function filterSortTrips() {
 
     // Filter Trips
     if (appliedFilter) {
-        filteredSortedArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter)
+        if (appliedFilter === "single") {
+            // Filter for single destination trips
+            filteredSortedArrTrips = arrTrips.filter(trip => trip.destinationAmount === "single");
+        } else if (appliedFilter === "multi") {
+            // Filter for multi destination trips
+            filteredSortedArrTrips = arrTrips.filter(trip => trip.destinationAmount === "multi");
+        }else if (appliedFilter === "round") {
+            // Filter for round trips
+            filteredSortedArrTrips = arrTrips.filter(trip => trip.returnOrigin === "round");
+        }else if (appliedFilter === "special") {
+            // Filter for round trips
+            filteredSortedArrTrips = arrTrips.filter(trip => trip.rrb === "special");
+        }else {
+            // Filter for other trip types
+            filteredSortedArrTrips = arrTrips.filter(trip => trip.tripLength == appliedFilter);
+        }
     } else {
-        filteredSortedArrTrips = arrTrips; 
+        filteredSortedArrTrips = arrTrips;
     }
 
     // Sort Trips
 
-    if (appliedSort == "low to high") {
-        // Sort the plants from the lowest to highest price
-        filteredSortedArrTrips = filteredSortedArrTrips.sort((a,b) => {
+     // Sort Trips
+     if (appliedSort == "low to high") {
+        // Sort the trips from lowest to highest price
+        filteredSortedArrTrips = filteredSortedArrTrips.sort((a, b) => {
             return a.price - b.price;
-
         });
-
     } else if (appliedSort == "date added") {
-
-        // Sort plants from the newest to oldest
-        filteredSortedArrTrips = filteredSortedArrTrips.sort((a,b) =>{
-            let da = new Date(a.addedDate);
-            let db = new Date(b.addedDate);
-
-            return db-da;
+        // Sort trips from newest to oldest by the 'addedDate' property
+        filteredSortedArrTrips = filteredSortedArrTrips.sort((a, b) => {
+            let dateA = new Date(a.addedDate);
+            let dateB = new Date(b.addedDate);
+            return dateB - dateA;
         });
-         
     }
-
 
     console.log(filteredSortedArrTrips)
   
@@ -248,7 +294,8 @@ function filterSortTrips() {
 // ---------------------------------------------------------------------------
 
 $("#tripsContainer").on('click', '.card', function() {
-
+  
+    
     // Toggle OFF
     $(this).find("#priceText").toggle();
     $(this).find("#whereText").toggle();
@@ -260,6 +307,8 @@ $("#tripsContainer").on('click', '.card', function() {
     $(this).find("#departureText").toggle();
     $(this).find("#codeText").toggle();
     $(this).find("#buttonText").toggle();
+    $(this).find("#arrivalText").toggle();
+    
 
     // Resize the image to fit additional content
     
