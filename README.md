@@ -24,9 +24,9 @@
 <p>Carissa Claassens-231016@virtualwindow.co.za</p>
 <p>-Project Link:<a href="https://github.com/Carissa03-boop/T3DvFinalP231016.git">ProjectLink</a></p>
 
-<p>Acknowledgements</p>
-<a href="https://www.w3schools.com/jquery/jquery_animate.asp">ww3schools</a>
-<a href="https://www.figma.com/files/recents-and-sharing?fuid=1210213159815880574">Figma</a>
+<p><b>Acknowledgements</b></p>
+<p><a href="https://www.w3schools.com/jquery/jquery_animate.asp">ww3schools</a></p>
+<p><a href="https://www.figma.com/files/recents-and-sharing?fuid=1210213159815880574">Figma</a></p>
 
 <p>And thank you to the Lecturers!</p>
 
