@@ -19,8 +19,8 @@ $(document).ready(function() {
   });
 
 
- // JavaScript code to retrieve and display the selected trip data on the checkout page
-// JavaScript code to retrieve and display the selected trip data on the checkout page
+
+// JavaScript code to get and display the selected trip on the checkout page
 $(document).ready(function() {
     // Retrieve the selectedTrips array from localStorage
     const selectedTripsJSON = localStorage.getItem('selectedTrips');
