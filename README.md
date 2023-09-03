@@ -22,7 +22,7 @@
 
 <p><b>Contact</b></p>
 <p>Carissa Claassens-<a href="https://drive.google.com/file/d/1VUBrA_KG-gLq_a-Rt5PYU-ZVRzhN16aZ/view?usp=drive_link)https://drive.google.com/file/d/1VUBrA_KG-gLq_a-Rt5PYU-ZVRzhN16aZ/view usp=drive_link"></p>
-<p>-Project Link:<a href="https://drive.google.com/file/d/1VUBrA_KG-gLq_a-Rt5PYU-ZVRzhN16aZ/view?usp=drive_link)https://drive.google.com/file/d/1VUBrA_KG-gLq_a-Rt5PYU-ZVRzhN16aZ/view usp=drive_link">231016@virtualwindow.co.za</a></p>
+<p>-Project Link:<a href="https://github.com/Carissa03-boop/T3DvFinalP231016.git">ProjectLink</a></p>
 
 <p>Acknowledgements</p>
 <a href="https://www.w3schools.com/jquery/jquery_animate.asp">ww3schools</a>
