@@ -1,3 +1,22 @@
+$(document).ready(function() {
+    const logoImage = $('#logoImage');
+
+    // Store the initial image source
+    const initialSrc = logoImage.attr('src');
+    
+    // Define the path to the new image
+    const newSrc = '/ASSESTS/LogoGif.gif';
+
+    // Change the image source to the new image on hover
+    logoImage.hover(
+        function() {
+            logoImage.attr('src', newSrc);
+        },
+        function() {
+            logoImage.attr('src', initialSrc); // Restore the initial source on mouse out
+        }
+    );
+  });
 // ---------------------------------------------------------------------------
 // Trips Arry
 // ---------------------------------------------------------------------------
@@ -10,14 +29,13 @@ const arrTrips = [
         price:" 2250 ",
         date:" March 5-8, 2023",
         departure:" Santorini, Greece ",
-        arrival:"my huis",
+        arrival:"Stockholm, Sweden, Amsterdam, Netherlands",
         code:"0054",
         image:"trip1.jpg",
         tripLength:"short",
         addedDate:"2023-03-05",
+        rrb:"special",
         destinationAmount:"multi",
-        returnOrigin:"round",
-        rrb:"special"
 
     },
     {
@@ -26,12 +44,11 @@ const arrTrips = [
         price:" 3300 ",
         date:" May 1-11, 2023",
         departure:" Cairns, Australia",
-        arrival:"my huis",
+        arrival:"Cairns, Australia",
         code:" 0854",
         image:"trip2.jpg",
         tripLength:"long",
         addedDate:"2023-05-01",
-        destinationAmount:"multi",
         returnOrigin:"round",
         rrb:"special"
 
@@ -43,7 +60,7 @@ const arrTrips = [
         price:" 4500 ",
         date:" July 4-9, 2023",
         departure:" Malé, Maldives ",
-        arrival:"my huis",
+        arrival:"Rio de Janeiro, Brazil",
         code:" 0954",
         image:"trip3.jpg",
         tripLength:"short",
@@ -58,12 +75,11 @@ const arrTrips = [
         price:" 2700",
         date:" August 8-11, 2023",
         departure:" Bergen, Norway",
-        arrival:"my huis",
+        arrival:"Bergen, Norway",
         code:" 3054",
         image:"trip4.jpg",
         tripLength:"short",
         addedDate:"2023-08-08",
-        destinationAmount:"multi",
         returnOrigin:"round",
         rrb:"special"
 
@@ -75,7 +91,7 @@ const arrTrips = [
         price:" 3750 ",
         date:" March 15-18, 2023",
         departure:" Miami, USA",
-        arrival:"my huis",
+        arrival:"Vancouver, Canada",
         code:" 7054",
         image:"trip5.jpg",
         tripLength:"short",
@@ -90,7 +106,7 @@ const arrTrips = [
         price:"  2850 ",
         date:" April 20-24, 2023",
         departure:" San Francisco, USA",
-        arrival:"my huis",
+        arrival:"Dubrovnik, Croatia, Nassau, Bahamas",
         code:" 0076",
         image:"trip6.jpg",
         tripLength:"short",
@@ -106,7 +122,7 @@ const arrTrips = [
         price:" 5250 ",
         date:" January 5-15, 2024",
         departure:" Papeete, Polynesia",
-        arrival:"my huis",
+        arrival:"Oslo, Norway, Istanbul, Machu Picchu, Peru",
         code:" 0984",
         image:"trip7.jpg",
         tripLength:"long",
@@ -121,12 +137,11 @@ const arrTrips = [
         price:" 2550 ",
         date:" December 7-14, 2023",
         departure:" Hạ City, Vietnam",
-        arrival:"my huis",
+        arrival:"Hạ City, Vietnam",
         code:" 0454",
         image:"trip8.jpg",
         tripLength:"long",
         addedDate:"2023-12-07",
-        destinationAmount:"multi",
         returnOrigin:"round",
         rrb:"special"
 
@@ -139,7 +154,7 @@ const arrTrips = [
         price:" 4200 ",
         date:" November 14-16, 2023",
         departure:" Nice, France",
-        arrival:"my huis",
+        arrival:"Phuket, Thailand",
         code:" 2345",
         image:"trip9.jpg",
         tripLength:"short",
@@ -314,3 +329,38 @@ $("#tripsContainer").on('click', '.card', function() {
     
     $(this).find(".card-img-top").toggleClass("small");
 });
+
+
+// JavaScript code to handle the purchase button click
+// JavaScript code to handle the purchase button click
+$(document).ready(function() {
+    const selectedTrips = []; // Array to store selected trips
+
+    $('.purchase-button').click(function() {
+        // Retrieve trip data from the card where the button was clicked
+        const card = $(this).closest('.card');
+        const tripName = card.find('#nameText').text().trim();
+        const tripPrice = parseFloat(card.find('#priceText').text().replace('R', '').trim()); // Parse the price as a float
+        const tripCode = card.find('#codeText').text().trim();
+
+        // Create an object to store the trip data
+        const tripData = {
+            name: tripName,
+            price: tripPrice,
+            code: tripCode
+        };
+
+        // Push the trip data to the selectedTrips array
+        selectedTrips.push(tripData);
+
+        // Update the UI to show the number of selected trips (optional)
+        $('#selected-trips-count').text(selectedTrips.length);
+
+        // You can optionally display the selected trips in a list or any other way here
+
+        // Store the selectedTrips array in localStorage
+        localStorage.setItem('selectedTrips', JSON.stringify(selectedTrips));
+    });
+});
+
+  

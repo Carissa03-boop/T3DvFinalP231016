@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville:wght@700&family=Oxanium:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville:wght@700&family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Oxanium:wght@500;700&display=swap');
 
+body{
+    background-color: antiquewhite;
+    height: 900px;
+    padding-top: 150px;
+}
 /* ------------------------------------------------------------------------------- */
 /* Navigationbar */
 .navbar{
@@ -61,6 +66,9 @@ margin-right: 20px;
 }
 
 
+
+
+
 /* Footer */
 
 footer {
@@ -69,7 +77,6 @@ footer {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
   }
   
   .section {
@@ -115,8 +122,6 @@ footer {
     background-color:#a4c9ba; 
 }
 
-/* UI Footer */
-
 
 
 
@@ -126,117 +131,58 @@ footer {
     padding-top: 10px;
 }
 
+/* the table */
 
-/* Card */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 0 auto;
 
-.card{
-    border-radius: 30px 30px ;
-    background-color: #E1DBB8;
-    color: #004B55;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.remove-button {
+    background-color: #f44336;
+    color: white;
     border: none;
-    height: 450px;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
-.card:hover{
-    border-radius: 30px 30px ;
-    background-color: #004B55;
-    color: #fdfefe;
-    border: 2px solid #1EC5D2;
-    height: 450px;
-    transition: opacity 0.3s ease;
+.remove-button:hover {
+    background-color: #d32f2f;
 }
 
-
-.card-img-top {
-    border-radius: 26px 26px 1px 1px;
-    width: 100%; /* Adjust the image width to 100% of the parent container */
-    height: auto; /* Let the browser maintain the aspect ratio */
-    margin: auto;
-    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+#remove-all-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    float: inline-start;
+    margin-left: 1180px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
-
-.card-img-top.small{
-    height: 160px;
+#remove-all-button:hover {
+    background-color: #d32f2f;
 }
 
-.oncard{
-    float: right;
-    margin-right: 10px;
-    margin-top: -60px;
-    border-radius: 20px;
+.btn.btn-success {
+    margin-left: 1200px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+
 }
-
-.card-text,.card-title{
-    padding-left: 20px;
-    padding-top: 5px;
-}
-
-
-
-/* filter and sorting buttons */
-.row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .sort {
-    margin-left: auto;
-  }
-  
-  /* Adjust the label styles to maintain proper alignment */
-  .sort label {
-    margin-left: 10px;
-  }
-  
-  /* Clear the float to prevent other elements from overlapping */
-  .container {
-    clear: both;
-  }
-
-  .btn-outline-success{
-    border: 1px solid #004B55 ;
-    color: #004B55;
-    border-radius: 20px;
-  }
-
-/* The checked color state for the radio buttons */
-.btn-group .btn-check:checked + .btn-outline-success {
-    background-color: #004B55;
-    color: #F0EDE4; 
-    border-color: #004B55; 
-}
-
-/* The hover state for the radio buttons */
-.btn-group .btn-outline-success:hover {
-    color: #1EC5D2;
-    border-color: #1EC5D2; 
-}
-
-.btn-outline-secondary{
-    border: 1px solid #1EC5D2 ;
-    color: #1EC5D2;
-    border-radius: 20px;
-  }
-
-
-.btn-group .btn-check:checked + .btn-outline-secondary { 
-    border-color: #1EC5D2;
-    background-color: #1EC5D2; 
-}
-
-/* Change the hover state for the radio buttons */
-.btn-group .btn-outline-secondary:hover {
-    border-color: #004B55; 
-    color: #004B55;
-}
-
-
-
-
-
-
-
-
-  

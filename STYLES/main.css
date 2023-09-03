@@ -1,4 +1,11 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville:wght@700&family=Oxanium:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville:wght@700&family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Oxanium:wght@500;700&display=swap');
 
+
+body{
+    background-color: antiquewhite;
+}
 /* ------------------------------------------------------------------------------- */
 /* Navigationbar */
 .navbar{
@@ -6,7 +13,7 @@
     height: 80px;
 }
 .nav-link{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Oxanium', cursive;
     color: #a4c9ba;
 
 }
@@ -34,6 +41,30 @@
 }
 
 /* UI elements */
+
+.bi.bi-cart{
+    color: #a4c9ba;
+    font-size: 25px;
+margin-right: 20px;
+}
+
+.bi.bi-cart:hover{
+    color: #F0EDE4;
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.bi.bi-person-circle{
+    color: #a4c9ba;
+    font-size: 25px;
+}
+
+.bi.bi-person-circle:hover{
+    color: #F0EDE4;
+    font-size: 25px;
+}
+
+
 
 
 
@@ -93,8 +124,6 @@ footer {
     background-color:#a4c9ba; 
 }
 
-/* UI Footer */
-
 
 
 
@@ -110,20 +139,121 @@ footer {
     align-items: center;
     padding: 20px;
     border: 1px solid #ccc;
+    background-color: #eff8f9;
 }
 
 .weather-image img {
-    max-width: 100%;
+    max-width: 300px;
     height: auto;
     margin-right: 20px;
+    float: right;
+    margin-top: 7px;
+}
+.weather-temperature{
+    color: #555;
+
 }
 
 .weather-title {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #004B55;
+    font-family: 'Oxanium', cursive;
+}
+
+.weather-place{
+    color: #004B55;
+    font-family: 'Oxanium', cursive;
 }
 
 .weather-description {
     font-size: 16px;
     color: #555;
 }
+
+#Tropical{
+    color:#004B55;
+    font-size: 70px;
+    padding-bottom: 250px;
+    font-family: 'Oxanium', cursive;
+    font-weight: 600;
+
+}
+
+.accordion {
+    --bs-accordion-btn-bg: #d8e6e8;
+    --bs-accordion-active-bg: #8facb0;
+    --bs-accordion-btn-color: #004B55;
+    --bs-accordion-active-color: #004B55;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-bg: #a2bdc1;
+    --bs-accordion-color: #004B55; 
+    --bs-accordion-btn-icon-active-color: #004B55;
+    --bs-accordion-btn-focus-border-color: unset;
+
+    width: 70%;
+    margin: 0 auto;
+    font-family: 'Oxanium', cursive;
+}
+
+
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+}
+
+.accordion-button {
+    border-top: 1px solid #004B55;
+}
+
+.accordion-item:last-child .accordion-button.collapsed,
+.accordion-item:last-child .accordion-body{
+    border-bottom: 1px solid;
+}
+/* Button styles */
+.custom-button {
+    background-color: #004B55;
+    color: aqua;
+    border: 2px solid #05d8f4;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transition for hover effect */
+    margin-left: 10px;
+    font-family: 'Oxanium', cursive;
+}
+
+/* Hover state */
+.custom-button:hover {
+    background-color: aqua;
+    color: #004B55;
+    border-color: aqua;
+}
+
+.custom-button1 {
+    background-color: #004b55b0;
+    color: rgb(248, 250, 250);
+    border-radius: 30px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transition for hover effect */
+    margin-left: 10px;
+}
+
+.weather-image{
+    padding-top: 3px;
+}
+
+.weather-temperature{
+    margin-top: -20px;
+}
+
+
+
+
+
+
+
+
+
+
